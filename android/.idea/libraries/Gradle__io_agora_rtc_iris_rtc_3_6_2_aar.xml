@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Gradle: io.agora.rtc:iris-rtc:3.6.2@aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/d7a0fe146b993a925da6bc0e1491764f/transformed/jetified-iris-rtc-3.6.2/jars/classes.jar!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/d7a0fe146b993a925da6bc0e1491764f/transformed/jetified-iris-rtc-3.6.2/jars/libs/AgoraRtcWrapper.jar!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/d7a0fe146b993a925da6bc0e1491764f/transformed/jetified-iris-rtc-3.6.2/jars/libs/agora-rtc-sdk.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/d7a0fe146b993a925da6bc0e1491764f/transformed/jetified-iris-rtc-3.6.2/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/d7a0fe146b993a925da6bc0e1491764f/transformed/jetified-iris-rtc-3.6.2/AndroidManifest.xml" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

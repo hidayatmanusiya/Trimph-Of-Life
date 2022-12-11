@@ -1,0 +1,132 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:get/get.dart';
+import 'package:triumph_life_ui/Controller/post_controller.dart';
+import 'package:triumph_life_ui/models/post_model.dart';
+
+class ReactionListController extends GetxController {
+  PostController postController = Get.put(PostController());
+  getLike(PostModel post) async {
+    List tempList = [];
+    DocumentSnapshot doc = await post.ref.collection('Likes').doc('info').get();
+    if (doc.exists) {
+      var len = doc.data()['TotalLists'];
+      for (var i = 0; i < len; i++) {
+        int index = i + 1;
+        await post.ref.collection('Likes').doc("$index").get().then((likeList) {
+          if (likeList.exists) {
+            var listdata = likeList.data()['list'];
+            tempList.addAll(listdata);
+          }
+        });
+      }
+      post.likeList = tempList;
+      print(postController.allPosts);
+      postController.update();
+    }
+  }
+
+  getHaha(PostModel post) async {
+    List tempList = [];
+    DocumentSnapshot doc = await post.ref.collection('Hahas').doc('info').get();
+    if (doc.exists) {
+      var len = doc.data()['TotalLists'];
+      for (var i = 0; i < len; i++) {
+        int index = i + 1;
+        await post.ref.collection('Hahas').doc("$index").get().then((likeList) {
+          if (likeList.exists) {
+            var listdata = likeList.data()['list'];
+            tempList.addAll(listdata);
+          }
+        });
+      }
+      post.hahaList = tempList;
+      print(postController.allPosts);
+      postController.update();
+    }
+  }
+
+  getAngry(PostModel post) async {
+    List tempList = [];
+    DocumentSnapshot doc =
+        await post.ref.collection('Angrys').doc('info').get();
+    if (doc.exists) {
+      var len = doc.data()['TotalLists'];
+      for (var i = 0; i < len; i++) {
+        int index = i + 1;
+        await post.ref
+            .collection('Angrys')
+            .doc("$index")
+            .get()
+            .then((likeList) {
+          if (likeList.exists) {
+            var listdata = likeList.data()['list'];
+            tempList.addAll(listdata);
+          }
+        });
+      }
+      post.angryList = tempList;
+      print(postController.allPosts);
+      postController.update();
+    }
+  }
+
+  getSad(PostModel post) async {
+    List tempList = [];
+    DocumentSnapshot doc = await post.ref.collection('Sads').doc('info').get();
+    if (doc.exists) {
+      var len = doc.data()['TotalLists'];
+      for (var i = 0; i < len; i++) {
+        int index = i + 1;
+        await post.ref.collection('Sads').doc("$index").get().then((likeList) {
+          if (likeList.exists) {
+            var listdata = likeList.data()['list'];
+            tempList.addAll(listdata);
+          }
+        });
+      }
+      post.sadList = tempList;
+      print(postController.allPosts);
+      postController.update();
+    }
+  }
+
+  getLove(PostModel post) async {
+    List tempList = [];
+    DocumentSnapshot doc = await post.ref.collection('Loves').doc('info').get();
+    if (doc.exists) {
+      var len = doc.data()['TotalLists'];
+      for (var i = 0; i < len; i++) {
+        int index = i + 1;
+        await post.ref.collection('Loves').doc("$index").get().then((likeList) {
+          if (likeList.exists) {
+            var listdata = likeList.data()['list'];
+            tempList.addAll(listdata);
+          }
+        });
+      }
+      post.loveList = tempList;
+      print(postController.allPosts);
+      postController.update();
+    }
+  }
+
+  getWow(PostModel post) async {
+    List tempList = [];
+    DocumentSnapshot doc = await post.ref.collection('Wows').doc('info').get();
+    if (doc.exists) {
+      var len = doc.data()['TotalLists'];
+      for (var i = 0; i < len; i++) {
+        int index = i + 1;
+        await post.ref.collection('Wows').doc("$index").get().then((likeList) {
+          if (likeList.exists) {
+            var listdata = likeList.data()['list'];
+            tempList.addAll(listdata);
+          }
+        });
+      }
+      post.wowList = tempList;
+      print(postController.allPosts);
+      postController.update();
+    }
+  }
+}
